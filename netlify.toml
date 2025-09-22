@@ -10,6 +10,8 @@
   to = "/index.html"
   status = 200
 
-# Disable automatic Next.js plugin detection
-[build.processing]
-  skip_processing = true
+# Explicitly disable Next.js plugin
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disable = true

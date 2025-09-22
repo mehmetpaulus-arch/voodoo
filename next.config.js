@@ -11,6 +11,10 @@ const nextConfig = {
   experimental: {
     outputFileTracingRoot: undefined,
   },
+  // Force static export
+  generateBuildId: async () => {
+    return 'static-build'
+  },
 };
 
 module.exports = nextConfig;
